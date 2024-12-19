@@ -1,0 +1,60 @@
+/*===== FEATURED =====*/
+.featured__container {
+  row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.sneaker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: $dark-color-lighten;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+
+  &__sale {
+    position: absolute;
+    left: 0.5rem;
+    background-color: $dark-color;
+    color: $white-color;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: $h2-font-size;
+    transform: rotate(-90deg);
+    letter-spacing: 0.1rem;
+  }
+  &__img {
+    width: 220px;
+    margin-top: $mb-3;
+    margin-bottom: $mb-6;
+    transform: $rotate-img;
+    filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.2));
+  }
+  &__name,
+  &__preci {
+    font-size: $h2-font-size;
+    letter-spacing: 0.1rem;
+    font-weight: $font-bold;
+  }
+  &__name {
+    margin-bottom: $mb-1;
+  }
+  &__preci {
+    margin-bottom: $mb-4;
+  }
+}
+.sneaker:hover {
+  transform: translateY(-0.5rem);
+}
+.sneaker__pages {
+  margin-top: $mb-6;
+}
+.sneaker__pag {
+  padding: 0.5rem 1rem;
+  border: 1px solid $dark-color;
+}
+.sneaker__pag:hover {
+  background-color: $dark-color;
+  color: $white-color;
+}

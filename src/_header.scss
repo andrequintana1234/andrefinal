@@ -1,0 +1,64 @@
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: $dark-color-lighten;
+}
+/*===== NAV =====*/
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: $header-height;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: $white-color;
+    transition: 0.5s;
+  }
+}
+
+.nav__item {
+  margin-bottom: $mb-4;
+}
+
+.nav__logo {
+  font-weight: $font-semi-bold;
+}
+.nav__toggled,
+.nav__shop {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+/*Show menu*/
+.show {
+  left: 0;
+}
+/*Active link*/
+.active {
+  position: relative;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 45%;
+  width: 4px;
+  height: 4px;
+  background-color: $dark-color;
+  border-radius: 50%;
+}
+/*Change color header*/
+.scroll-header {
+  background-color: $white-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

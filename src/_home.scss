@@ -1,0 +1,39 @@
+/*===== HOME =====*/
+.home {
+  background-color: $dark-color-lighten;
+  overflow: hidden;
+
+  &__container {
+    height: calc(100vh - 3rem);
+  }
+  &__sneaker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  &__shape {
+    width: 220px;
+    height: 220px;
+    background-color: $dark-color;
+    border-radius: 50%;
+  }
+  &__img {
+    position: absolute;
+    top: 1.5rem;
+    width: 275px;
+    transform: $rotate-img;
+  }
+  &__new {
+    display: block;
+    font-size: $font-semi-bold;
+    font-weight: $mb-2;
+  }
+  &__title {
+    font-size: $bigger-font-size;
+    margin-bottom: $mb-1;
+  }
+  &__description {
+    margin-bottom: $mb-6;
+  }
+}
